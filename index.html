@@ -6,6 +6,17 @@
   <title>NeonRoboBNB — proof-of-work collection on BNB Chain</title>
   <meta name="description" content="10,000 neon robotos mined under a keccak target on BNB Chain. First unit 0.50 USDT per wallet, every unit after that 1.00 USDT — quoted from the contract, proceeds straight to the deployer." />
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    @media (max-width: 820px) { .tiles { grid-template-columns: repeat(2, 1fr); } }
+    .tile { background: var(--panel2); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+    .tile img { width: 100%; display: block; background: #000; }
+    .tier { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; padding: 4px 9px; border-bottom: 1px solid var(--line); color: var(--muted); }
+    .tier.t0 { color: #cfcfcf; } .tier.t1 { color: #8fd0a0; } .tier.t2 { color: #7db6ff; }
+    .tier.t3 { color: #d79bff; } .tier.t4 { color: var(--gold); border-bottom-color: var(--gold-dim); }
+    .tl { font-size: 11px; line-height: 1.5; padding: 7px 9px 9px; color: var(--muted); font-family: var(--mono); }
+    .sheet { width: 100%; display: block; border-radius: 8px; border: 1px solid var(--line); margin-top: 8px; }
+  </style>
 </head>
 <body>
 <header class="site">
@@ -29,6 +40,7 @@
        — dikutip langsung dari kontrak, tanpa batas jumlah.</p>
     <a class="btn cta" href="mint.html">Mulai mining</a>
     <a class="btn" href="#gallery">Lihat gallery</a>
+    <div style="margin-top:26px"><img src="img/hero.png" alt="NeonRoboBNB hero" width="300" style="border-radius:14px;border:1px solid var(--line)" /></div>
   </div>
 
   <div id="pending" class="panel gold" style="display:none">
@@ -89,8 +101,39 @@
   </div>
 
   <div class="panel" id="gallery">
-    <h2 style="margin-top:0">Gallery preview</h2>
-    <p class="tiny muted">Pratinjau dari library seni di rantai — seed ditentukan mana pun, traits & SVG dibuat on-chain oleh <span class="mono">NeonroboBNBArt</span>. Belum mint? Tetap bisa lihat.</p>
+    <h2 style="margin-top:0">Gallery</h2>
+    <p class="tiny muted">Art asli dari generator koleksi ini — tile di bawah memakai roll trait
+       (label = roll asli saat tile dibuat) dan tier mengikuti ambang rarity yang sama dengan
+       yang dipakai kontrak. Angka supply/harga selalu dari rantai; galeri ini murni seni.</p>
+    <div class="tiles">
+        <div class="tile"><img src="img/tile-00.png" alt="NeonRoboBNB preview" loading="lazy" /><div class="tier t1">Uncommon</div><div class="tl">Body: Chamfer<br>Hat: Bare<br>Eyes: Shut<br>Beard: Beard<br>Chest: Square<br>Arms: Raised<br>Legs: Block<br>Item: Key<br>Stamp: None</div></div>
+        <div class="tile"><img src="img/tile-01.png" alt="NeonRoboBNB preview" loading="lazy" /><div class="tier t1">Uncommon</div><div class="tl">Body: Tall<br>Hat: Bare<br>Eyes: Cyclops<br>Beard: Beard+Line<br>Chest: None<br>Arms: Blocks<br>Legs: Standard<br>Item: None<br>Stamp: None</div></div>
+        <div class="tile"><img src="img/tile-02.png" alt="NeonRoboBNB preview" loading="lazy" /><div class="tier t2">Rare</div><div class="tl">Body: Wide<br>Hat: Antenna<br>Eyes: Wide<br>Beard: Grill<br>Chest: None<br>Arms: Fists<br>Legs: Standard<br>Item: Bottle<br>Stamp: None</div></div>
+        <div class="tile"><img src="img/tile-03.png" alt="NeonRoboBNB preview" loading="lazy" /><div class="tier t1">Uncommon</div><div class="tl">Body: Taper<br>Hat: Beanie<br>Eyes: Shut<br>Beard: Fork<br>Chest: Square<br>Arms: None<br>Legs: Standard<br>Item: Bottle<br>Stamp: None</div></div>
+        <div class="tile"><img src="img/tile-04.png" alt="NeonRoboBNB preview" loading="lazy" /><div class="tier t1">Uncommon</div><div class="tl">Body: Blocky<br>Hat: Beanie<br>Eyes: Offset<br>Beard: Beard<br>Chest: Cross<br>Arms: None<br>Legs: Short<br>Item: None<br>Stamp: None</div></div>
+        <div class="tile"><img src="img/tile-05.png" alt="NeonRoboBNB preview" loading="lazy" /><div class="tier t1">Uncommon</div><div class="tl">Body: Wide<br>Hat: Trim Cap<br>Eyes: Cross<br>Beard: Line<br>Chest: None<br>Arms: Raised<br>Legs: Standard<br>Item: Bottle<br>Stamp: None</div></div>
+        <div class="tile"><img src="img/tile-06.png" alt="NeonRoboBNB preview" loading="lazy" /><div class="tier t0">Common</div><div class="tl">Body: Blocky<br>Hat: Mohawk<br>Eyes: Duo<br>Beard: None<br>Chest: Wide<br>Arms: None<br>Legs: Standard<br>Item: None<br>Stamp: None</div></div>
+        <div class="tile"><img src="img/tile-07.png" alt="NeonRoboBNB preview" loading="lazy" /><div class="tier t0">Common</div><div class="tl">Body: Tall<br>Hat: Bare<br>Eyes: Wide<br>Beard: Beard<br>Chest: Square<br>Arms: Blocks<br>Legs: Standard<br>Item: None<br>Stamp: None</div></div>
+        <div class="tile"><img src="img/tile-08.png" alt="NeonRoboBNB preview" loading="lazy" /><div class="tier t0">Common</div><div class="tl">Body: Blocky<br>Hat: Trim Cap<br>Eyes: Angry<br>Beard: None<br>Chest: Square<br>Arms: Blocks<br>Legs: Wide<br>Item: None<br>Stamp: None</div></div>
+        <div class="tile"><img src="img/tile-09.png" alt="NeonRoboBNB preview" loading="lazy" /><div class="tier t0">Common</div><div class="tl">Body: Tall<br>Hat: Mohawk<br>Eyes: Angry<br>Beard: None<br>Chest: Square<br>Arms: None<br>Legs: Short<br>Item: None<br>Stamp: None</div></div>
+        <div class="tile"><img src="img/tile-10.png" alt="NeonRoboBNB preview" loading="lazy" /><div class="tier t2">Rare</div><div class="tl">Body: Blocky<br>Hat: Beanie<br>Eyes: Offset<br>Beard: Beard+Line<br>Chest: Diamond<br>Arms: Asym<br>Legs: Short<br>Item: Bottle<br>Stamp: None</div></div>
+        <div class="tile"><img src="img/tile-11.png" alt="NeonRoboBNB preview" loading="lazy" /><div class="tier t1">Uncommon</div><div class="tl">Body: Tall<br>Hat: Mohawk<br>Eyes: Offset<br>Beard: Line<br>Chest: Square<br>Arms: Blocks<br>Legs: Wide<br>Item: Bloom<br>Stamp: None</div></div>
+    </div>
+
+    <hr class="sep" />
+    <div class="grid2">
+      <div><b class="tiny">8 siluet badan</b><img class="sheet" src="img/sheet-bodies.png" alt="8 body silhouettes" loading="lazy" /></div>
+      <div><b class="tiny">Combo glow</b><img class="sheet" src="img/sheet-combos.png" alt="8 glow combos" loading="lazy" /></div>
+    </div>
+    <div class="grid2">
+      <div><b class="tiny">5 tier rarity (Common → Legend)</b><img class="sheet" src="img/sheet-rarity.png" alt="5 rarity tiers" loading="lazy" /></div>
+      <div><b class="tiny">Stempel BNB on/off</b><img class="sheet" src="img/sheet-stamp.png" alt="BNB stamp on and off" loading="lazy" /></div>
+    </div>
+
+    <hr class="sep" />
+    <h2 style="margin-top:0">Preview langsung dari rantai</h2>
+    <p class="tiny muted">Saat alamat library <span class="mono">ART</span> terpasang, seed apa pun
+       bisa dirender langsung oleh kontraknya (traits + SVG on-chain):</p>
     <div class="row" style="gap:8px; margin-bottom:12px">
       <input id="seed" placeholder="seed (uint256) — kosongkan untuk acak" style="max-width:420px" />
       <button id="seed-go">Generate</button>
